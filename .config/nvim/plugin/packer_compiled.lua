@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  aniseed = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/aniseed",
+    url = "https://github.com/Olical/aniseed"
+  },
   catppuccin = {
     config = { "\27LJ\2\2D\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0%colorscheme catppuccin-macchiato\bcmd\bvim\0" },
     loaded = true,
@@ -125,6 +130,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -145,6 +155,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  ["nterm.nvim"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/nterm.nvim",
+    url = "https://github.com/jlesquembre/nterm.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -164,6 +179,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-autotag"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
+    url = "https://github.com/windwp/nvim-ts-autotag"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

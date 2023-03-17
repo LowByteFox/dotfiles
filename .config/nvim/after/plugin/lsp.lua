@@ -4,7 +4,8 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
 	'tsserver',
-	'eslint'
+	'eslint',
+    'rust_analyzer'
 })
 
 lsp.configure('lua-language-server', {
@@ -54,6 +55,12 @@ lsp.setup_nvim_cmp({
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
+    sign_icons = {
+        error = 'E',
+        warn = 'W',
+        hint = 'H',
+        info = 'I'
+    }
 })
 
 lsp.on_attach(function(client, bufnr)
