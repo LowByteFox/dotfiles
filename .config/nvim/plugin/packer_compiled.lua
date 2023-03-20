@@ -85,7 +85,6 @@ _G.packer_plugins = {
     url = "https://github.com/Olical/aniseed"
   },
   catppuccin = {
-    config = { "\27LJ\2\2D\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0%colorscheme catppuccin-macchiato\bcmd\bvim\0" },
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -155,11 +154,6 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  ["nterm.nvim"] = {
-    loaded = true,
-    path = "/home/jani/.local/share/nvim/site/pack/packer/start/nterm.nvim",
-    url = "https://github.com/jlesquembre/nterm.nvim"
-  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -169,6 +163,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
+  },
+  ["nvim-notify"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/nvim-notify",
+    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
@@ -215,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggleterm.nvim"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
+    url = "https://github.com/akinsho/toggleterm.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/undotree",
@@ -228,10 +232,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\2D\0\0\2\0\3\0\0056\0\0\0009\0\1\0'\1\2\0B\0\2\1K\0\1\0%colorscheme catppuccin-macchiato\bcmd\bvim\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

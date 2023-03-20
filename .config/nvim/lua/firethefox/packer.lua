@@ -11,10 +11,7 @@ return require('packer').startup(function(use)
   }
 
   use({ "catppuccin/nvim",
-  	as = "catppuccin",
-	config = function()
-		vim.cmd("colorscheme catppuccin-macchiato")
-	end
+  	as = "catppuccin"
   })
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -53,9 +50,12 @@ return require('packer').startup(function(use)
   use('nvim-tree/nvim-web-devicons')
   use('feline-nvim/feline.nvim')
   use("nvim-tree/nvim-tree.lua")
-  use('andweeb/presence.nvim')
   use('Olical/aniseed')
-  use('jlesquembre/nterm.nvim')
   use('windwp/nvim-ts-autotag')
   use('lewis6991/gitsigns.nvim')
+  use('rcarriga/nvim-notify')
+
+  use({
+      "akinsho/toggleterm.nvim", tag = '*'
+  })
 end)

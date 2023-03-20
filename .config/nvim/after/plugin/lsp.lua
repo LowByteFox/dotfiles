@@ -24,12 +24,12 @@ local cmp_select = {behavior = cmp.SelectBehavior.Select}
 
 cmp.setup({
     sources = {
-        -- { name = "nvim_lsp" },
+        { name = "nvim_lsp" },
         -- { name = "nvim_lsp_signature_help" },
         -- { name = "luasnip" },
         { name = "path" },
 
-        -- { name = "nvim_lua" },
+        { name = "nvim_lua" },
 
         -- { name = "calc" },
         { name = "emoji" },
@@ -76,10 +76,17 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, opts)
+
+  vim.cmd.autocmd('CursorHold <buffer> lua vim.diagnostic.open_float()')
 end)
 
 lsp.setup()
 
 vim.diagnostic.config({
-    virtual_text = true
+  virtual_text = false,
+  signs = true,
+  update_in_insert = true,
+  underline = true,
+  severity_sort = false,
+  float = { border = "rounded", focusable = false },
 })
