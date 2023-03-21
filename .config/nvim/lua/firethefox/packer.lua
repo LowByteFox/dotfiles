@@ -54,6 +54,7 @@ return require('packer').startup(function(use)
   use('windwp/nvim-ts-autotag')
   use('lewis6991/gitsigns.nvim')
   use('rcarriga/nvim-notify')
+  use('Fire-The-Fox/bun.nvim')
 
   use({
       "akinsho/toggleterm.nvim", tag = '*'
