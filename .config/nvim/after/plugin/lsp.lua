@@ -8,7 +8,6 @@ lsp.ensure_installed({
     'rust_analyzer'
 })
 
--- Fixed this bitch
 -- https://github.com/ThePrimeagen/init.lua/pull/35/commits/f509e46dd2df06d390045c4f912e7644e57b7142
 lsp.nvim_workspace()
 

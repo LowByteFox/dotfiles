@@ -25,3 +25,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 150
+
+vim.cmd.set("clipboard+=unnamedplus")
