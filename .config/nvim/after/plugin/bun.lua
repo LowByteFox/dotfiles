@@ -1,7 +1,7 @@
 local bun = require("bun")
 
 bun.setup({
-    close_on_exit = true,
+    close_on_exit = false,
     cwd = "current"
 })
 

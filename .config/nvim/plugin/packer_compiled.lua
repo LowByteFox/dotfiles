@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["crystal.nvim"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/crystal.nvim",
+    url = "https://github.com/spencerwi/crystal.nvim"
+  },
   ["feline.nvim"] = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/feline.nvim",
@@ -209,6 +214,11 @@ _G.packer_plugins = {
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["presence.nvim"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/presence.nvim",
+    url = "https://github.com/andweeb/presence.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -223,6 +233,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/jani/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
+  },
+  ["vim-crystal"] = {
+    loaded = true,
+    path = "/home/jani/.local/share/nvim/site/pack/packer/start/vim-crystal",
+    url = "https://github.com/vim-crystal/vim-crystal"
   },
   ["vim-fugitive"] = {
     loaded = true,

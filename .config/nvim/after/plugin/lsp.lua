@@ -8,36 +8,13 @@ lsp.ensure_installed({
     'rust_analyzer'
 })
 
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
+-- Fixed this bitch
+-- https://github.com/ThePrimeagen/init.lua/pull/35/commits/f509e46dd2df06d390045c4f912e7644e57b7142
+lsp.nvim_workspace()
 
 local cmp = require('cmp')
 
 local cmp_select = {behavior = cmp.SelectBehavior.Select}
-
-cmp.setup({
-    sources = {
-        { name = "nvim_lsp" },
-        -- { name = "nvim_lsp_signature_help" },
-        -- { name = "luasnip" },
-        { name = "path" },
-
-        { name = "nvim_lua" },
-
-        -- { name = "calc" },
-        { name = "emoji" },
-        -- { name = "spell", keyword_length = 4 },
-        -- { name = "rg", dup = 0 },
-        -- { name = "vim-dadbod-completion" },
-    },
-})
 
 local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
@@ -63,7 +40,7 @@ lsp.set_preferences({
     }
 })
 
-lsp.on_attach(function(client, bufnr)
+lsp.on_attach(function(_, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
