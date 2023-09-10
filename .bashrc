@@ -94,3 +94,25 @@ alias egrep='grep -E --color=auto'
 
 alias df='df -h'
 alias free='free -h'
+
+# tty
+if [ "$TERM" = "linux" ]; then
+    echo -en "\e]P0282828" #black
+    echo -en "\e]P82B2B2B" #darkgrey
+    echo -en "\e]P1FF4F58" #darkred
+    echo -en "\e]P9FF4F58" #red
+    echo -en "\e]P273D936" #darkgreen
+    echo -en "\e]PA73D936" #green
+    echo -en "\e]P3FFDD33" #brown
+    echo -en "\e]PBFFDD33" #yellow
+    echo -en "\e]P496A6C8" #darkblue
+    echo -en "\e]PC96A6C8" #blue
+    echo -en "\e]P59E95C7" #darkmagenta
+    echo -en "\e]PD9E95C7" #magenta
+    echo -en "\e]P696A6C8" #darkcyan
+    echo -en "\e]PE96A6C8" #cyan
+    echo -en "\e]P7E4E4E4" #lightgrey
+    echo -en "\e]PFE4E4E4" #white
+    clear
+fi
+
