@@ -1,4 +1,4 @@
-require("firethefox.remap")
-require("firethefox.set")
+require("lowbytefox.set")
+require("lowbytefox.remap")
 
 vim.keymap.set("n", "Q", "<nop>")

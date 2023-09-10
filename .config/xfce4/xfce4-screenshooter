@@ -1,0 +1,13 @@
+app=gimp-2.10
+custom_action_command=none
+last_user=
+last_extension=png
+enable_imgur_upload=true
+show_in_folder=false
+screenshot_dir=file:///home/jani/Obrázky
+action=4
+delay=10
+region=2
+show_mouse=0
+show_border=0
+
