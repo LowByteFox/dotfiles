@@ -6,4 +6,4 @@
 
 ### My current wallpaper
 
-![Wallpaper](./wallpapers/senko.png)
+![Wallpaper](./wallpaper/senko.png)
