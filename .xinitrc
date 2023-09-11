@@ -37,13 +37,12 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
-# xrandr --output HDMI-A-0 --primary --left-of eDP &
-xrandr --output eDP --off &
+xrandr-mgr &
 
 numlockx &
 
 pulseaudio &
 
-xwallpaper --zoom $HOME/wallpaper/senko.png &
+xwallpaper --zoom $HOME/wallpapers/openbsd.png &
 
 exec dbus-launch dwm
