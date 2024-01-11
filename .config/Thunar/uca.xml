@@ -2,11 +2,11 @@
 <actions>
 <action>
 	<icon>utilities-terminal</icon>
-	<name>Otvoriť v termináli</name>
+	<name>Open Terminal Here</name>
 	<submenu></submenu>
-	<unique-id>1687679822652332-1</unique-id>
+	<unique-id>1701473082884345-1</unique-id>
 	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
-	<description>Príklad vlastnej akcie</description>
+	<description>Example for a custom action</description>
 	<range></range>
 	<patterns>*</patterns>
 	<startup-notify/>

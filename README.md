@@ -6,4 +6,4 @@
 
 ### My current wallpaper
 
-![Wallpaper](./wallpapers/openbsd.png)
+![Wallpaper](./wallpapers/wallpaper.png)

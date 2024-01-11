@@ -40,13 +40,12 @@ vim.cmd[[hi StatusLineNC cterm=none ctermbg=0 ctermfg=7]]
 vim.g.zig_fmt_autosave = 0
 
 vim.keymap.set("n", "<leader>pc", function()
-	vim.cmd.enew()
 	vim.cmd.Ex()
 end)
 
 vim.keymap.set("n", "<leader>tt", function()
 	vim.cmd[[botright new]]
-	vim.cmd.terminal()
+	vim.cmd[[terminal]]
 	vim.cmd[[setlocal nonumber norelativenumber]]
 	vim.cmd[[startinsert]]
 end)
@@ -58,3 +57,51 @@ function send_exit()
 		vim.cmd[[q!]]
     end
 end
+
+function list_buffers()
+    local buf_list = vim.fn.getbufinfo()
+    print('List of open buffers: ')
+
+    local cwd = vim.fn.getcwd()
+    local buffernums = {}
+
+    for k, v in pairs(buf_list) do
+        if v.loaded ~= 1 or v.listed ~= 1 then
+            goto continue
+        end
+
+        if #v.name == 0 then
+            print(string.format("%d: [No name]", v.bufnr))
+        else
+            print(string.format("%d: %s", v.bufnr, string.gsub(v.name, cwd .. "/", "")))
+        end
+        table.insert(buffernums, v.bufnr)
+        ::continue::
+    end
+
+    return buffernums
+end
+
+function contains(array, item)
+    for _, value in ipairs(array) do
+        if value == item then
+            return true
+        end
+    end
+    return false
+end
+
+function switch_buffer()
+    local nums = list_buffers()
+
+    local buf_num = vim.fn.input("Enter buffer number to switch to: ")
+
+    if tonumber(buf_num) and contains(nums, tonumber(buf_num)) then
+        vim.cmd("b " .. buf_num)
+    else
+        vim.notify("\nInvalid buffer " .. buf_num)
+    end
+end
+
+-- neovim je mimo
+vim.api.nvim_set_keymap('n', '<Leader>pb', ':lua switch_buffer()<CR>', { noremap = true, silent = true })
